@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <!-- Background with squircle safe padding -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  
+  <!-- Outer passport card frame -->
+  <g filter="url(#shadow)">
+    <rect x="96" y="76" width="320" height="360" rx="28" fill="#ffffff" />
+    
+    <!-- Inner photo frame area -->
+    <rect x="126" y="106" width="260" height="260" rx="16" fill="#F1F5F9" />
+    
+    <!-- Biometric Face Silhouette -->
+    <!-- Head -->
+    <circle cx="256" cy="190" r="50" fill="#047857" />
+    <!-- Shoulders/Torso -->
+    <path d="M 176 330 C 176 270, 206 250, 256 250 C 306 250, 336 270, 336 330 Z" fill="#047857" />
+    
+    <!-- Passport Biometric Crop Marks / Corner brackets -->
+    <path d="M 140 136 L 140 120 L 156 120" stroke="#10B981" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <path d="M 372 136 L 372 120 L 356 120" stroke="#10B981" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <path d="M 140 336 L 140 352 L 156 352" stroke="#10B981" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <path d="M 372 336 L 372 352 L 356 352" stroke="#10B981" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    
+    <!-- Center Guide Crosshair -->
+    <circle cx="256" cy="236" r="3" fill="#10B981" opacity="0.6"/>
+
+    <!-- Bottom document barcode / MRZ simulation lines -->
+    <rect x="136" y="386" width="160" height="8" rx="4" fill="#E2E8F0" />
+    <rect x="136" y="404" width="240" height="8" rx="4" fill="#CBD5E1" />
+  </g>
+</svg>
